@@ -3,6 +3,7 @@
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
 			<item value="C:\Users\cunha\Documents\workspace-spring-tools-for-eclipse-5.1.1.RELEASE\blogpessoal"/>
+			<item value="C:\Users\cunha\Documents\workspace-spring-tools-for-eclipse-5.1.1.RELEASE\projetoJavaAula"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
