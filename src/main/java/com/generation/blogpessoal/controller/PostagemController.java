@@ -58,8 +58,7 @@ public class PostagemController {
 			
 			postagem.setId(null);
 
-			return ResponseEntity.status(HttpStatus.CREATED)
-					.body(postagemRepository.save(postagem));
+			return ResponseEntity.status(HttpStatus.CREATED).body(postagemRepository.save(postagem));
 		}
 
 		throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tema não existe!", null);
@@ -71,8 +70,7 @@ public class PostagemController {
 		if (postagemRepository.existsById(postagem.getId())) {
 
 			if (temaRepository.existsById(postagem.getTema().getId()))
-				return ResponseEntity.status(HttpStatus.OK)
-						.body(postagemRepository.save(postagem));
+				return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(postagem));
 
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tema não existe!", null);
 
