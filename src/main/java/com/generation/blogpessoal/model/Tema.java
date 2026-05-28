@@ -26,9 +26,9 @@ public class Tema {
 	@NotBlank(message = "O Atributo Descrição é obrigrátorio")
 	private String descricao;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tema", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties(value = "tema", allowSetters = true)
-	private List<Postagem> postagem;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tema", cascade = CascadeType.REMOVE) // Define o relacionamento entre as tabelas | "FetchType.LAZY" = Carrega os dados apenas quando necessário | Um tema para muitas postagens | CascadeType.REMOVE define que quando um tema for deletado, todas as postagens relacionadas a ele também serão deletadas
+	@JsonIgnoreProperties(value = "tema", allowSetters = true) // Define que a propriedade tema da classe Postagem deve ser ignorada na serialização para evitar loop infinito | allowSetters = true permite que a propriedade tema seja setada na classe Postagem
+	private List<Postagem> postagem; // Define a lista de postagens relacionadas ao tema | List<Postagem> postagem = new ArrayList<>(); | List<Postagem> postagem = new LinkedList<>();
 	
 	public Long getId() {
 		return this.id;
