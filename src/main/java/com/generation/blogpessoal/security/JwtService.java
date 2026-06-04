@@ -17,7 +17,7 @@ import io.jsonwebtoken.security.Keys;
 @Component
 public class JwtService {
 
-    private String secret = "e4740eb7d7ab34a8924d6929554c9519d6245613bc914cde29c859126d44bec2";
+    private String secret = "5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437";
     private Duration expiration = Duration.ofMinutes(60);
     
     private SecretKey signingKey;
@@ -63,4 +63,4 @@ public class JwtService {
     }
     
 }
- // e4740eb7d7ab34a8924d6929554c9519d6245613bc914cde29c859126d44bec2
+
